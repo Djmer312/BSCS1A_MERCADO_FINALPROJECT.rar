@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+      <p> Services.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+   <section class="services">
+     <div class="service-container">
+       <span>
+           <h1>📄</h1>
+           <h3>Web Development</h3>
+           <p id="text1">Web Development focuses on creating functional and responsive websites for various devices.</p>
+            <button onclick="showMore('text1')">Read More</button>
+      </span>
+      <img src= "Image to PDF Converter/Web Development.jpg" alt = "web development" />
+     </div>
+
+     <div class="service-container">
+       <span>
+           <h1>👤</h1>
+           <h3>Graphic Designer</h3>
+           <p id="text2">Graphic Design involves creating visually appealing designs to represent your brand effectively.</p>
+            <button onclick="showMore('text2')">Read More</button>
+      </span>
+      <img src= "Image to PDF Converter/GraphicDesigner.jpg" alt = "web development" />
+     </div>
+        
+     <div class="service-container">
+       <span>
+           <h1>🔔</h1>
+           <h3>Programmer Analyst</h3>
+           <p id="text3">A Programmer Analyst develops efficient and scalable software solutions tailored to client needs.</p>
+            <button onclick="showMore('text3')">Read More</button>
+      </span>
+      <img src= "Image to PDF Converter/Programmer Analyst.jpg" alt = "web development" />
+      </div>
+    </div>
+ </section>
+
+ <script>
+    function showMore(id) {
+        const text = document.getElementById(id);
+        if (text.classList.contains('expanded')) {
+            text.classList.remove('expanded');
+            if (id === 'text1') {
+                text.innerHTML = "Web Development focuses on creating functional and responsive websites for various devices.";
+            } else if (id === 'text2') {
+                text.innerHTML = "Graphic Design involves creating visually appealing designs to represent your brand effectively.";
+            } else if (id === 'text3') {
+                text.innerHTML = "A Programmer Analyst develops efficient and scalable software solutions tailored to client needs.";
+            }
+        } else {
+            text.classList.add('expanded');
+            if (id === 'text1') {
+                text.innerHTML = "Web Development focuses on creating functional and responsive websites for various devices. Additionally, we ensure these websites are optimized for performance, user experience, and accessibility.";
+            } else if (id === 'text2') {
+                text.innerHTML = "Graphic Design involves creating visually appealing designs to represent your brand effectively. This includes logos, marketing materials, and user-centric interfaces that reflect your identity.";
+            } else if (id === 'text3') {
+                text.innerHTML = "A Programmer Analyst develops efficient and scalable software solutions tailored to client needs. This includes analyzing requirements, designing algorithms, and ensuring code quality.";
+            }
+        }
+    }
+</script>
+
+    <footer>
+        <p>&copy; 2024 Danice Jacenne Mercado. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
